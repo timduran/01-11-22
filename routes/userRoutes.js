@@ -1,6 +1,11 @@
+// Needs  JWT and models
+
 const router = require('express').Router()
 const { User } = require('../models')
 const jwt = require('jsonwebtoken')
+
+// route for registering new User (calling for name username and password)
+
 
 router.post('/users/register', (req, res) => {
   const { name, username } = req.body
@@ -9,6 +14,8 @@ router.post('/users/register', (req, res) => {
     res.sendStatus(200)
   })
 })
+
+// route for logging in existing Users and Authentication and applying hash and salt to password
 
 router.post('/users/login', (req, res) => {
   const { username } = req.body

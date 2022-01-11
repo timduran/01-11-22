@@ -15,4 +15,5 @@ const Post = new Schema({
   }
 })
 
+//User: Attaching User ID to Post 
 module.exports = model('post', Post)

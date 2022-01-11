@@ -16,6 +16,8 @@ const User = new Schema({
   }]
 }, { timestamps: true })
 
+// Post: attaching Post to User to timestamps when post are created 
+
 User.plugin(require('passport-local-mongoose'))
 
 module.exports = model('user', User)
